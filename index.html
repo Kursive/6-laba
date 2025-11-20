@@ -1,0 +1,128 @@
+﻿<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Современный веб-сайт</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+
+
+    <header>
+        <h1>Добро пожаловать</h1>
+        <nav>
+            <ul>
+                <li><a href="#">Главная</a></li>
+                <li><a href="#">О нас</a></li>
+                <li><a href="#">Услуги</a></li>
+                <li><a href="#">Контакты</a></li>
+                <button id="themeToggle" class="theme-btn">
+                    <span class="sun">☀</span>
+                    <span class="moon">🌙</span>
+                </button>
+
+            </ul>
+        </nav>
+    </header>
+
+
+    <div class="container">
+        <!-- Левая колонка -->
+
+        <div class="sidebar">
+            <h2>Меню</h2>
+            <ul>
+                <li><a href="#">Домашняя страница</a></li>
+                <li><a href="#">О нас</a></li>
+                <li><a href="#">Наши услуги</a></li>
+                <li><a href="#">Контакты</a></li>
+                <li><a href="#">Отзывы</a></li>
+            </ul>
+        </div>
+
+        <!-- Центральный контент -->
+        <div class="content">
+            <h2>Заголовок статьи</h2>
+            <p>Наш сайт предоставляет уникальные услуги для вашего бизнеса. Мы стремимся к тому, чтобы наши клиенты получали только лучшее качество и результат. Присоединяйтесь к нам, чтобы вывести ваш бизнес на новый уровень.</p>
+            <p>Контент будет регулярно обновляться, и вы всегда сможете найти актуальную информацию на нашем сайте.</p>
+
+            <! АККОРДЕОН >
+            <section class="accordion">
+                <div class="accordion-item">
+                    <h3 class="accordion-title">Заголовок 1</h3>
+                    <div class="accordion-content">Текст 1. Здесь можно разместить описание или полезную информацию.</div>
+                </div>
+
+                <div class="accordion-item">
+                    <h3 class="accordion-title">Заголовок 2</h3>
+                    <div class="accordion-content">Текст 2. Контент этого раздела раскрывается по клику.</div>
+                </div>
+
+                <div class="accordion-item">
+                    <h3 class="accordion-title">Заголовок 3</h3>
+                    <div class="accordion-content">Текст 3. Можно добавить изображения, ссылки или списки.</div>
+                </div>
+            </section>
+
+            <! ФИЛЬТРЫ ДЛЯ ГАЛЕРЕИ>
+            <div class="filters">
+                <button data-category="all" class="active">Все</button>
+                <button data-category="nature">Природа</button>
+                <button data-category="city">Город</button>
+            </div>
+
+            <! ФОТОГАЛЕРЕЯ >
+            <div class="gallery">
+                <img src="https://img.freepik.com/free-photo/sunlight-green-forest_181624-263.jpg?w=400" data-category="nature" class="preview">
+                <img src="https://images.pexels.com/photos/2506923/pexels-photo-2506923.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" data-category="city" class="preview">
+                <img src="https://img.freepik.com/free-photo/cityscape-with-modern-buildings_1127-2989.jpg?w=400" data-category="city" class="preview">
+                <img src="https://img.freepik.com/free-photo/skyscrapers-modern-city_1127-3102.jpg?w=400" data-category="city" class="preview">
+                <img src="https://img.freepik.com/free-photo/waterfall-in-deep-forest_181624-2458.jpg?w=400" data-category="nature" class="preview">
+            </div>
+        </div>
+
+
+
+        <!-- Правая колонка -->
+        <div class="advertisement">
+            <h3>Реклама</h3>
+            <p>Специальное предложение! Получите скидку 20% на все услуги, если зарегистрируетесь сегодня. Не упустите шанс!</p>
+        </div>
+    </div>
+<div id="images"></div>
+    <div class="reviews-section">
+        <h2 class="reviews-title">Отзывы наших клиентов</h2>
+
+        <div class="reviews-carousel">
+
+            <button class="arrow left" id="prevReview">❮</button>
+
+            <div class="reviews-wrapper" id="reviewsWrapper">
+
+            </div>
+
+            <button class="arrow right" id="nextReview">❯</button>
+
+        </div>
+    </div>
+    <button id="scrollReviewBtn" class="scroll-review-btn">Прокрутить отзыв</button>
+
+    <footer>
+        <p>&copy; 2025 Современный сайт. Все права защищены.</p>
+    </footer>
+
+ <!Сам добавил>
+    <div id="modal" class="modal">
+
+        <span class="close">&times;</span>
+        <img class="modal-content" id="modalImg">
+
+    </div>
+    <button id="scrollTopBtn" class="scroll-btn">↑</button>
+
+    <script src="script.js"></script>
+</body>
+</html>

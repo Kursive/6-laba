@@ -1,0 +1,390 @@
+﻿/* === ОСНОВНОЙ СТИЛЬ === */
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f0f0;
+    color: #333;
+}
+
+/* Заголовок */
+header {
+    background-color: #4CAF50;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+header h1 {
+    margin: 0;
+}
+
+header nav ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+header nav ul li {
+    display: inline;
+    margin-right: 15px;
+}
+
+header nav ul li a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+}
+
+header nav ul li a:hover {
+    text-decoration: underline;
+}
+
+/* Контейнер */
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 20px;
+}
+
+/* Левая колонка */
+.sidebar {
+    flex: 1;
+    min-width: 220px;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.sidebar h2 {
+    font-size: 24px;
+    color: #4CAF50;
+}
+
+.sidebar ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.sidebar li {
+    margin: 10px 0;
+}
+
+.sidebar a {
+    text-decoration: none;
+    color: #333;
+    font-weight: 500;
+}
+
+.sidebar a:hover {
+    color: #4CAF50;
+}
+
+/* Контент */
+.content {
+    flex: 2;
+    min-width: 300px;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.content h2 {
+    background: none;
+    padding: 5px 0;
+    border-radius: 0;
+    color: inherit;
+}
+
+.content p {
+    font-size: 18px;
+    line-height: 1.6;
+    margin: 15px 0;
+}
+
+/* Правая колонка — Реклама */
+.advertisement {
+    background-color: #f0f0f0;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    flex: 1;
+    min-width: 220px;
+}
+
+.advertisement h3 {
+    font-size: 22px;
+    color: #E91E63;
+}
+
+.advertisement p {
+    font-size: 18px;
+    color: #555;
+}
+
+/* Подвал */
+footer {
+    background-color: #4CAF50;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    width: 100%;
+}
+
+/* Адаптив */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .sidebar, .content, .advertisement {
+        flex: none;
+        width: 100%;
+    }
+}
+
+@media (max-width: 400px) {
+    header h1 {
+        font-size: 20px;
+    }
+
+    .content p {
+        font-size: 16px;
+    }
+}
+
+/* === АККОРДЕОН === */
+.accordion-item {
+    border-bottom: 1px solid #ccc;
+    margin-bottom: 10px;
+}
+
+.accordion-title {
+    background-color: #4CAF50;
+    color: white;
+    padding: 12px;
+    cursor: pointer;
+    border-radius: 6px;
+    font-weight: 600;
+    transition: background 0.3s;
+}
+
+.accordion-title:hover {
+    background-color: #45a049;
+}
+
+.accordion-content {
+    display: none;
+    padding: 12px;
+    background: #f9f9f9;
+    border-radius: 6px;
+}
+
+.accordion-item.active .accordion-content {
+    display: block;
+}
+
+/* === ФИЛЬТРЫ === */
+.filters {
+    text-align: center;
+    margin: 30px 0 10px;
+}
+
+.filters button {
+    background-color: #444;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    margin: 5px;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.filters button:hover {
+    background-color: #666;
+}
+
+.filters button.active {
+    background-color: #2196f3;
+}
+
+/* === ГАЛЕРЕЯ === */
+.gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+    padding: 20px;
+}
+
+.gallery img {
+    width: 220px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: transform 0.3s;
+}
+
+.gallery img:hover {
+    transform: scale(1.05);
+}
+
+/* === МОДАЛЬНОЕ ОКНО === */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.8);
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-content {
+    max-width: 80%;
+    max-height: 80%;
+    border-radius: 10px;
+}
+
+.close {
+    position: absolute;
+    top: 20px;
+    right: 35px;
+    color: #fff;
+    font-size: 40px;
+    cursor: pointer;
+}
+
+/* === КНОПКА НАВЕРХ === */
+.scroll-btn {
+    position: fixed;
+    bottom: 25px;
+    right: 25px;
+    display: none;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 12px 16px;
+    border-radius: 50%;
+    font-size: 20px;
+    cursor: pointer;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.3);
+    z-index: 999;
+}
+
+/* === КНОПКА ТЕМЫ === */
+.theme-btn {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    width: 48px;
+    height: 48px;
+    background-color: #4CAF50;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.25);
+    font-size: 22px;
+    z-index: 1000;
+}
+
+.theme-btn span {
+    position: absolute;
+    transition: opacity 0.3s, transform 0.3s;
+}
+
+.sun { opacity: 1; }
+.moon { opacity: 0; }
+
+/* Темная тема */
+.dark-theme {
+    background-color: #222;
+    color: #eee;
+}
+
+.dark-theme header,
+.dark-theme footer {
+    background-color: #333;
+}
+
+.dark-theme .sidebar,
+.dark-theme .content,
+.dark-theme .advertisement {
+    background-color: #333;
+    color: #eee;
+}
+
+.dark-theme .moon { opacity: 1; }
+.dark-theme .sun { opacity: 0; }
+
+/* === ОТЗЫВЫ — КАРУСЕЛЬ === */
+.reviews-section {
+    width: 100%;
+    margin-top: 40px;
+    text-align: center;
+}
+
+.reviews-carousel {
+    position: relative;
+    width: 100%;
+    max-width: 600px;
+    margin: auto;
+    overflow: hidden;
+}
+
+.reviews-wrapper {
+    display: flex;
+    transition: transform 0.5s ease;
+}
+
+.review {
+    min-width: 100%;
+    padding: 20px;
+}
+
+.review-text {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.review-author {
+    font-weight: bold;
+    font-size: 16px;
+}
+
+.arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: #444;
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    font-size: 22px;
+    border-radius: 50%;
+    opacity: 0.7;
+}
+
+.arrow.left { left: -50px; }
+.arrow.right { right: -50px; }
+
+.scroll-review-btn {
+    display: block;
+    margin: 20px auto;
+    padding: 12px 20px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 18px;
+}
